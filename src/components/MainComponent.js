@@ -28,8 +28,6 @@ class Main extends Component {
             <React.Fragment>
                 <SearchBar />
                 <br></br><br></br>
-                <p>City::</p>
-                
                 
             </React.Fragment>
             
