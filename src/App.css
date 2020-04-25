@@ -1,19 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Gotu&family=Harmattan&family=Raleway&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
+  width: 100%;
   background: #667db6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+
+}
+
+.titleTag {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  color: white;
+  margin-top: 120px;
+}
+
+.cityInput {
+  border: 5px solid white; 
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  margin-top: 100px;
 }
 
 .weatherBox {
-  margin-top: 150px;
+  margin-top: 20px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  background-image: url("./images/bg2.jpg");
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 .weatherBoxContent {
   padding: 40px;
@@ -29,5 +56,14 @@ body {
   float: right;
   color: white;
   font-family: 'Raleway', sans-serif;
+}
+
+.futureDataBox {
+  text-align: center;
+}
+
+.reloadHead {
+  color: white;
+  text-align: center;
 }
 

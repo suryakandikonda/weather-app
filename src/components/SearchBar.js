@@ -62,7 +62,7 @@ class SearchBar extends Component {
             return (
                 <>
                         <form onSubmit={this.getCity}>
-                            <input id="standard-basic" label="Standard"  onChange={this.updateCity} value={this.state.city}   />
+                            <input id="standard-basic" label="Standard"  onChange={this.updateCity} value={this.state.city} className="cityInput shadow-sm animated fadeIn" placeholder="Enter city name" />
                         </form>
                 </>
             );
@@ -88,7 +88,7 @@ class SearchBar extends Component {
         return (
             <>
                 <form onSubmit={this.getCity}>
-                    <input id="standard-basic" label="Standard"  onChange={this.updateCity} value={this.state.city}   />
+                    <input id="standard-basic" label="Standard"  onChange={this.updateCity} value={this.state.city}  className="cityInput shadow animated fadeIn" />
                 </form>
             </>
         );

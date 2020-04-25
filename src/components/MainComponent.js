@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Weather from './WeatherComponent';
 import SearchBar from './SearchBar';
+import Chart from './Charts';
 
 class Main extends Component {
 
@@ -26,7 +27,8 @@ class Main extends Component {
         console.log("From main: " + this.state.Maincity);
         return (
             <React.Fragment>
-                <SearchBar />
+                <h1 className="display-3 titleTag">Weather App</h1>
+                <SearchBar className="container" />
                 <br></br><br></br>
                 
             </React.Fragment>
