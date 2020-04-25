@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Weather from './WeatherComponent';
 import SearchBar from './SearchBar';
-import Chart from './Charts';
 
 class Main extends Component {
 
@@ -21,7 +19,6 @@ class Main extends Component {
     }
 
    
-
 
     render() {
         console.log("From main: " + this.state.Maincity);

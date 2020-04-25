@@ -19,7 +19,7 @@ function Weather(props) {
     var date = new Date();
     date = date.toDateString();
     
-    fetch('http://api.openweathermap.org/data/2.5/forecast?q=Eluru&appid=14da7948c8c451432c4176e27a6e72c7')
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=Eluru&appid=ea76099250443f57a27aa8bd170aca75')
     .then(res => res.json())
     .then(
         (result) => {
@@ -58,46 +58,6 @@ function Weather(props) {
         
     }
 
-    console.log("Tomorrow: " + tomorrow);
-    
-    
-    /*
-    return (
-        
-        <ul>
-        {list.map(item => (
-            <li key={item.dt}>
-                {item.dt_txt}</li>
-            
-        ))}
-        </ul>
-    ); */
-
-
-        //console.log("From weather: " + props.city);
-        /*return (
-           <React.Fragment>
-                <div className="weatherBox container shadow animated fadeInUp">
-                    <div className="row">
-                        <div className="col">
-                            <div className="weatherBoxContent">
-                                <h2 className="display-4">{city}</h2>
-                                <h6 className="">April 19, 2020</h6>
-                            </div>
-                        </div>
-                        <div className="col">
-                            <div className="weatherBoxTemp">
-                                <h1 className="display-1">72 &ordm;</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-             
-                
-           </React.Fragment>
-        ); */
-
 
         const [des, setDesc] = useState("");
         const [temp, setTemp] = useState();
@@ -105,7 +65,7 @@ function Weather(props) {
         const [humidity, setHumidity] = useState();
         const [windSpeed, setwindSpeed] = useState();
 
-        fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&appid=14da7948c8c451432c4176e27a6e72c7')
+        fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&appid=ea76099250443f57a27aa8bd170aca75')
     .then(function(resp) { return resp.json() })
     .then((data) => {
         console.log("Result: " + JSON.stringify(data.current.clouds));

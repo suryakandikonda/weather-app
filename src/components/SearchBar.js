@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import TextField from '@material-ui/core/TextField';
-import Snackbar from '@material-ui/core/Snackbar';
-import Alert from '@material-ui/lab/Alert';
 import Weather from './WeatherComponent';
 
 class SearchBar extends Component {
@@ -27,9 +24,7 @@ class SearchBar extends Component {
 
 
     getCity(event) {
-        //alert("From Search City:" + this.state.city);
-        //this.setState({status:true});
-        fetch('http://api.openweathermap.org/data/2.5/weather?q='+this.state.city+'&appid=14da7948c8c451432c4176e27a6e72c7')
+        fetch('https://api.openweathermap.org/data/2.5/weather?q='+this.state.city+'&appid=ea76099250443f57a27aa8bd170aca75')
         .then(function(resp) { return resp.json() })
         .then((data) => {
             if(data.cod == 200) {
@@ -37,7 +32,6 @@ class SearchBar extends Component {
                 this.setState({lat:data.coord.lat});
                 this.setState({lon:data.coord.lon});
                 console.log("City Found");
-                //this.setState({status:true});
             }
             else if(data.cod == 404) {
                 this.setState({cityFound:false});
@@ -76,14 +70,6 @@ class SearchBar extends Component {
                 </div>
             );
         }
-        //const cityy = <Weather city={this.state.city}/>
-        /*return (
-            <>
-                <form onSubmit={this.getCity}>
-                    <input id="standard-basic" label="Standard"  onChange={this.updateCity} value={this.state.city}   />
-                </form>
-            </>
-        ); */
 
         return (
             <>
